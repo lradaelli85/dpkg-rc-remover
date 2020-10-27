@@ -2,7 +2,7 @@
 
 packages=($(dpkg -l |grep ^rc |awk '{print $2}'))
 reply="Null"
-DPKG=$(whereis dpkg)
+DPKG=$(which dpkg)
 
 if [ ${#packages[@]} -eq 0 ]; then
   echo 'nothing to purge'
